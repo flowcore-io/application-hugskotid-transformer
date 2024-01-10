@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.0 (2024-01-10)
+
+
+### Bug Fixes
+
+* Handle contact, organization, tenancy aggregators ([2e5a860](https://github.com/flowcore-io/application-hugskotid-transformer/commit/2e5a8607261dbdb7b0bf1bd7ca6d68a3f5f26319))
+
 ## [2.0.0](https://github.com/flowcore-io/nodejs-typescript-transformer-example/compare/v1.3.1...v2.0.0) (2023-10-24)
 
 
