@@ -2,7 +2,7 @@
 // This is the main entrypoint to the transformer, it should not be
 // necessary to modify this file for a basic transformer.
 // -------------------------------------------------------------------
-import express, {Request, Response} from "express";
+import express, { Request, Response } from "express";
 import health from "@functions/health.entrypoint";
 import transform from "@functions/transform.entrypoint";
 import start from "@functions/start.entrypoint";
@@ -16,11 +16,23 @@ app.get("/health", async (req: Request, res: Response): Promise<Response> => {
 });
 
 app.post("/transform", async (req: Request, res: Response): Promise<Response> => {
-  const { eventId, validTime, payload } = req.body;
-
+  const { eventId, validTime, payload, eventType, aggregator } = req.body;
+  if (eventType === "delete") {
+    return res.set({
+      "x-flowcore-delete-data": "true"
+    }).send(await transform({
+      eventId,
+      validTime,
+      aggregator,
+      eventType,
+      payload,
+    }));
+  }
   return res.send(await transform({
     eventId,
     validTime,
+    aggregator,
+    eventType,
     payload,
   }));
 });
