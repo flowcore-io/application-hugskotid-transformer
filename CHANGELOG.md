@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/flowcore-io/application-hugskotid-transformer/compare/v1.0.0...v1.0.1) (2024-01-17)
+
+
+### Bug Fixes
+
+* change eventID to eventid ([324ad1f](https://github.com/flowcore-io/application-hugskotid-transformer/commit/324ad1f70489c8a545510f178f21163e349d6418))
+* update expected in test ([537a957](https://github.com/flowcore-io/application-hugskotid-transformer/commit/537a957d073868d18ca6223d0f84af2d09894884))
+
 ## 1.0.0 (2024-01-10)
 
 
