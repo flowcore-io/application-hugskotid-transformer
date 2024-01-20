@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/flowcore-io/application-hugskotid-transformer/compare/v1.0.1...v1.0.2) (2024-01-20)
+
+
+### Bug Fixes
+
+* reject org and contact events without ids ([73b1832](https://github.com/flowcore-io/application-hugskotid-transformer/commit/73b18325da2e8081593128450e5c41186c224461))
+
 ## [1.0.1](https://github.com/flowcore-io/application-hugskotid-transformer/compare/v1.0.0...v1.0.1) (2024-01-17)
 
 
