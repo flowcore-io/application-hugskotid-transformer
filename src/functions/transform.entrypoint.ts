@@ -27,12 +27,18 @@ export default async function (input: Input) {
         contactid: input.payload.contactid,
       };
     }
+    if (!input.payload.contactid) {
+      return null;
+    }
   }
   if (input.aggregator === "organization") {
     if (input.eventType === "delete") {
       return {
         organizationid: input.payload.organizationid,
       };
+    }
+    if (!input.payload.organizationid) {
+      return null;
     }
   }
   if (input.aggregator === "tenancy") {
