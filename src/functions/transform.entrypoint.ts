@@ -27,6 +27,7 @@ export default async function (input: Input) {
         contactid: input.payload.contactid,
       };
     }
+    // If there is no contactid, then the event should be ignored
     if (!input.payload.contactid) {
       return null;
     }
@@ -37,6 +38,7 @@ export default async function (input: Input) {
         organizationid: input.payload.organizationid,
       };
     }
+    // If there is no organizationid, then the event should be ignored
     if (!input.payload.organizationid) {
       return null;
     }
@@ -47,6 +49,7 @@ export default async function (input: Input) {
         tenancyid: input.payload.tenancyid,
       };
     }
+    // The event should be ignored, unless both the tenancyid, organizationid and contactid are present
     if (
       !input.payload.tenancyid ||
       !input.payload.organizationid ||
