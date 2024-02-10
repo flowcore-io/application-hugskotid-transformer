@@ -21,8 +21,12 @@ export default async function (input: Input) {
   console.info(
     `The aggregator is ${input.aggregator}, the event type is ${input.eventType} and the contact has contactid=${input.payload.contactid}`,
   );
-  if (input.aggregator === "contact") {
-    if (input.eventType === "delete") {
+  const suffix = process.env.FLOWCORE_SUFFIX ?? "";
+  console.info(
+    `The suffix is ${suffix}`,
+  );
+  if (input.aggregator === "contact" + suffix) {
+    if (input.eventType === "delete" + suffix) {
       return {
         contactid: input.payload.contactid,
       };
@@ -32,8 +36,8 @@ export default async function (input: Input) {
       return null;
     }
   }
-  if (input.aggregator === "organization") {
-    if (input.eventType === "delete") {
+  if (input.aggregator === "organization" + suffix) {
+    if (input.eventType === "delete" + suffix) {
       return {
         organizationid: input.payload.organizationid,
       };
@@ -43,8 +47,8 @@ export default async function (input: Input) {
       return null;
     }
   }
-  if (input.aggregator === "tenancy") {
-    if (input.eventType === "delete") {
+  if (input.aggregator === "tenancy" + suffix) {
+    if (input.eventType === "delete" + suffix) {
       return {
         tenancyid: input.payload.tenancyid,
       };
