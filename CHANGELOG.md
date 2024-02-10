@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/flowcore-io/application-hugskotid-transformer/compare/v1.0.2...v1.1.0) (2024-02-10)
+
+
+### Features
+
+* add suffix to aggregator and event type ([407a3ca](https://github.com/flowcore-io/application-hugskotid-transformer/commit/407a3cae053e7d1a4541199cfb557f9cccbab63d))
+
 ## [1.0.2](https://github.com/flowcore-io/application-hugskotid-transformer/compare/v1.0.1...v1.0.2) (2024-01-20)
 
 
